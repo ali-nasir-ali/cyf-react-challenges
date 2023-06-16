@@ -1,0 +1,75 @@
+/* for all the index */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(1px + 2vmin);
+}
+.App {
+  max-width: 800px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  border-top: 0.25rem solid hsl(322, 66%, 87%);
+  border-right: 0.25rem solid hsl(210, 62%, 80%);
+  border-bottom: 0.25rem solid hsl(210, 62%, 80%);
+  border-left: 0.25rem solid hsl(322, 66%, 87%);
+  border-radius: 0.5rem;
+}
+
+/* baby name colors */
+
+.baby-name {
+  padding: 1px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.baby-name.m {
+  background-color: #008cba;
+  color: white;
+}
+
+.baby-name.f {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.names-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+/* search box */
+.search-box {
+  width: 300px;
+  height: 40px;
+  border: 2px solid black;
+  padding: 5px;
+  font-size: calc(1px + 2vmin);
+  margin-bottom: 8px;
+}
+
+/* bar line */
+.bar-line {
+  border-top: 2px solid black;
+  height: 0;
+  width: 80%;
+  margin-left: 10%;
+  border-color: gray;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
