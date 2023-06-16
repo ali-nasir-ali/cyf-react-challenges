@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import data from "./babyNamesData.json";
 import SearchBar from "./SearchBar";
 
-// baby name variables
 const BabyNamesList = () => {
   const [searchQuery, setSearchQuery] = useState("");
 

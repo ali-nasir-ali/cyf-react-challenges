@@ -13,8 +13,9 @@ body {
   align-items: center;
   font-size: calc(1px + 2vmin);
 }
-.App {
-  max-width: 800px;
+.main-app {
+  width: 90%;
+  margin: 5%;
   padding: 2rem;
   display: flex;
   flex-direction: column;
