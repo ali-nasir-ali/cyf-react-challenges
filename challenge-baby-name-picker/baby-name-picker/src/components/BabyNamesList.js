@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import data from "./babyNamesData.json";
+import data from "../Data/babyNamesData.json";
 import SearchBar from "./SearchBar";
 
 const BabyNamesList = () => {
