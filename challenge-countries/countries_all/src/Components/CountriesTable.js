@@ -1,37 +1,14 @@
 import React, { useState, useEffect } from "react";
+import countries from "../Data/countriesAll.json";
 
-// function Countries() {
-//   const [countries, setCountries] = useState([]);
-
-//   useEffect(() => {
-//     fetch("https://restcountries.com/v3.1/all")
-//       .then((response) => response.json())
-//       .then((data) => setCountries(data))
-//       .catch((error) => console.log(error));
-//   }, []);
-
-//   return (
-//     <div>
-//       <Header />
-//       <h2>List of Countries</h2>
-//       <ul>
-//         {countries.map((country) => (
-//           <li key={country.cca3}>{country.name.common}</li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }
-
-import countries from "./countriesAll.json";
-// import countriesAll from "./countriesAll.json";
-
-function CountriesTable() {
+function CountriesTable({ searchVal }) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     setData(countries);
   }, []);
+
+  const filteredCountries = data.filter((country) => country.name.toLowerCase().includes(searchVal.toLowerCase()));
 
   return (
     <div>
@@ -47,7 +24,7 @@ function CountriesTable() {
           </tr>
         </thead>
         <tbody>
-          {data.map((country) => (
+          {filteredCountries.map((country) => (
             <tr key={country.alpha3Code}>
               <td>{country.name}</td>
               <td>{country.capital}</td>
@@ -55,9 +32,7 @@ function CountriesTable() {
               <td>{country.region}</td>
               <td>{country.subregion}</td>
               <td>{country.languages.map((lan) => `${lan.name}, `)}</td>
-              <td>
-                <timg>{country.flag}</timg>
-              </td>
+              <td>{/* <img src={country.flag} alt="flag"></img> */}</td>
             </tr>
           ))}
         </tbody>
