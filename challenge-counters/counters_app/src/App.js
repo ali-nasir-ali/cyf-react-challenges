@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
+/// counter component
+//
 function Counter({ title, onIncrement, onReset }) {
   const [count, setCount] = useState(0);
 
@@ -23,6 +25,8 @@ function Counter({ title, onIncrement, onReset }) {
   );
 }
 
+// total component
+//
 function Total({ count }) {
   return (
     <div className="counter">
@@ -32,6 +36,8 @@ function Total({ count }) {
   );
 }
 
+// Main APP
+//
 function App() {
   const [total, setTotal] = useState(0);
   const [resetCallbacks, setResetCallbacks] = useState([]);
